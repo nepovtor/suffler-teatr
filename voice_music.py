@@ -1,5 +1,9 @@
 import speech_recognition as sr
-from playsound import playsound
+import simpleaudio as sa
+wave_obj = sa.WaveObject.from_wave_file('file.wav')
+play_obj = wave_obj.play()
+play_obj.wait_done()
+
 
 COMMAND_WORDS = {"музыка", "музыку"}
 
